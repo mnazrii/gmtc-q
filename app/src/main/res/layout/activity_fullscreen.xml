@@ -1,0 +1,141 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="a3.info_beamerv0.mnazrii.com.infobeamer03.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:textColor="#33b5e5"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:text="@string/dummy_content" />
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_vertical"
+            android:background="@color/black_overlay"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20">
+
+                <TextView
+                    android:text="Meeting Title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginStart="29dp"
+                    android:id="@+id/textViewmeetingtitle"
+                    android:textSize="80sp"
+                    android:layout_marginBottom="33dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".40"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimaryDark">
+
+                <TextView
+                    android:text="-"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginStart="29dp"
+                    android:id="@+id/textViewcurrent"
+                    android:textSize="80sp"
+                    android:layout_marginBottom="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:text="Current Presenter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textSize="50sp"
+                    tools:textColor="@android:color/white"
+                    android:layout_marginTop="31dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/textViewcurrent"
+                    android:layout_alignStart="@+id/textViewcurrent"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".40"
+                android:background="@android:color/holo_blue_light">
+
+                <TextView
+                    android:text="Next Presenter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/textViewnext"
+                    android:layout_alignStart="@+id/textViewnext"
+                    android:layout_marginTop="49dp"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:text="-"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="53dp"
+                    android:layout_marginStart="53dp"
+                    android:id="@+id/textViewnext"
+                    android:textSize="80sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
